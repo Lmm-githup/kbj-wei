@@ -2,11 +2,11 @@
     <image class="logo" src="../../../static/images/login-logo.png" lazy-load="false">
     </image>
 		<view class="xttxt">仅限部分个人用户申请，为了更好的为您服务，让您的账号更加安全，需要您授权康佰家+小程序获取您微信绑定的联系方式，作为登录康佰家+小程序的凭证</view>
-    <button class="wx" bind:tap="showAlert">
-    <!-- <button class="wx" open-type="getPhoneNumber" bindgetphonenumber="loginByWx"> -->
+    <!-- <button class="wx" bind:tap="showAlert"> -->
+    <button class="wx" open-type="getPhoneNumber" bindgetphonenumber="loginByWx">
         <view class="txt">我要绑定手机号</view>
-    <!-- </button> -->
     </button>
+    <!-- </button> -->
 <!-- 
     <view class="agreement">
     <radio checked="{{checked}}" bindtap="agreementBtn" class="radio"/><span bindtap="agreementContent">阅读并同意以下协议<text>《服务协议》</text></span>
@@ -19,7 +19,7 @@
         <view class="txt">测试号登录</view>
     </button> -->
 </view>
-<view class="alert" style="display: {{alert}};">
+<!-- <view class="alert" style="display: {{alert}};">
 	<view class="bg" bind:tap="exitAlert"></view>
 	<view class="con">
 		<view class="title">您是否同意授权微信绑定的手机号码？</view>
@@ -28,4 +28,4 @@
 			<button class="bb wxs" open-type="getPhoneNumber" bindgetphonenumber="loginByWx">确定</button>
 		</view>
 	</view>
-</view>
+</view> -->

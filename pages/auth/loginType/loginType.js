@@ -215,12 +215,12 @@ Page({
   //     url: '../loginByPhone/loginByPhone'
   //   });
   // },
-	showAlert: function(){
-    let that = this
+	// showAlert: function(){
+  //   let that = this
     // if(that.data.checked){
-      that.setData({
-        alert: 'flex'
-      })
+      // that.setData({
+      //   alert: 'flex'
+      // })
     // }else{
       // wx.showModal({
       //   title: '服务协议',
@@ -228,14 +228,12 @@ Page({
       //   showCancel:false
       // })
     // }
-	}, 
+	// }, 
 	exitAlert: function(){
 		this.setData({
 			alert: 'none'
 		})
 	},
-
-
   loginByDemophone: function(){
     // wx.navigateTo({
     //   url: '/pages/auth/loginByDemoPhone/loginByPhone'
