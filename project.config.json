@@ -332,6 +332,20 @@
 					"id": -1,
 					"name": "pages/auth/authorizeNew/authorize",
 					"pathName": "pages/auth/authorizeNew/authorize",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/auth/loginType/loginType",
+					"pathName": "pages/auth/loginType/loginType",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/auth/authorizeNew/authorize",
+					"pathName": "pages/auth/authorizeNew/authorize",
 					"scene": null
 				}
 			]

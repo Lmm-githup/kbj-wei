@@ -23,8 +23,8 @@
 		  <button style="background:#ccc;color:black;">拒绝登录</button>
     </navigator>  
     
-		<button bind:tap="showAlert">我要登录</button>
-    <!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:else>我要登录</button> -->
+		<button bind:tap="showAlert" wx:if="{{!checked}}">我要登录</button>
+    <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" wx:else>我要登录</button>
     </view>
 
       <view class="agreement">
@@ -33,7 +33,7 @@
 
   </view>
 </view>
-<view class="alert" style="display: {{alert}};">
+<!-- <view class="alert" style="display: {{alert}};">
 	<view class="bg" bind:tap="exitAlert"></view>
 	<view class="con">
 		<view class="title">是否同意授权您的微信信息？</view>
@@ -42,4 +42,4 @@
 			<button class="bb wxs" open-type="getUserInfo" bindgetuserinfo="getUserInfo">授权登录</button>
 		</view>
 	</view>
-</view>
+</view> -->
