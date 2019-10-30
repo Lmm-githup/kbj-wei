@@ -178,20 +178,23 @@ Page({
 						  }
 						});
 					}else{
-						wx.showModal({
-						  title: '提示',
-						  // content: tis,
-						  content: r.errmsg,
-						  showCancel: false,
-						  confirmText: '确定',
-						  success: (result) => {
-						    if(result.confirm){
-						      wx.switchTab({
-						        url: '/pages/mine/index/index'
-						      });
-						    }
-						  }
-						});
+            wx.switchTab({
+              url: '/pages/mine/index/index'//改为直接跳转至首页
+            });
+						// wx.showModal({
+						//   title: '提示',
+						//   // content: tis,
+						//   content: r.errmsg,
+						//   showCancel: false,
+						//   confirmText: '确定',
+						//   success: (result) => {
+						//     if(result.confirm){
+						//       wx.switchTab({
+						//         url: '/pages/mine/index/index'
+						//       });
+						//     }
+						//   }
+						// });
 					}
         }else{
           wx.showToast({
@@ -259,15 +262,15 @@ Page({
       }
     })
   },
-  agreementBtn:function(){
-    this.setData({
-      checked:!this.data.checked
-    })
-  },
+  // agreementBtn:function(){
+  //   this.setData({
+  //     checked:!this.data.checked
+  //   })
+  // },
   // 跳转协议内容
-  agreementContent:function(){
-    wx.navigateTo({
-      url: '../agreementContent/agreementContent',
-    })
-  }
+  // agreementContent:function(){
+  //   wx.navigateTo({
+  //     url: '../agreementContent/agreementContent',
+  //   })
+  // }
 })
