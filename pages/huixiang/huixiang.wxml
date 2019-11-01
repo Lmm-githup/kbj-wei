@@ -11,8 +11,8 @@
 </swiper>
 <view class="page">{{nowpage}}/{{page}}</view> -->
 <block wx:for="{{list}}">
-  <image wx:if="{{index==0}}" bind:tap="showimg" class="" style="height:{{imgheight}}px;width:{{imgwidth}}px;" src="{{item.thumb}}" mode="aspectFill" data-url="{{item.thumb}}" lazy-load="false" binderror="" bindload="imgLoad">
+  <image wx:if="{{index==0}}" bind:tap="showimg" class="" style="width:100%" src="{{item.thumb}}" mode="widthFix" data-url="{{item.thumb}}" lazy-load="false" binderror="">
   </image>
-  <image wx:else bind:tap="showimg" class="" style="height:{{imgheight}}px;width:{{imgwidth}}px;" src="{{item.thumb}}" mode="aspectFill" data-url="{{item.thumb}}" lazy-load="false" binderror="">
+  <image wx:else bind:tap="showimg" class="" style="width:100%" src="{{item.thumb}}" mode="widthFix" data-url="{{item.thumb}}" lazy-load="false" binderror="">
   </image>
 </block>

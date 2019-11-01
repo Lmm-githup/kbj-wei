@@ -9,9 +9,10 @@ Page({
   data: {
     url: '',
     nowpage: 1,
-    page: 1
+    page: 1,
+    // lists: ["https://cfwws.oldguanjia.com/Public/uploads/commodity/9/商品详情图片18759.jpg","https://cfwws.oldguanjia.com/Public/uploads/commodity/5/商品详情图片97513.jpg","https://cfwws.oldguanjia.com/Public/uploads/commodity/9/商品详情图片80019.jpg"]
   },
-
+ 
   /**
    * 生命周期函数--监听页面加载
    */
@@ -87,19 +88,19 @@ Page({
   onShareAppMessage: function () {
 
   },
-  imgLoad: function (e) {
-    let width = e.detail.width;
-    let height = e.detail.height;
-    const res = wx.getSystemInfoSync()
-    let that =this;
-    let scwidth = res.windowWidth;
-    let imgheight = scwidth/width*height;
-    console.log(width,height,scwidth,imgheight)
-    that.setData({
-      imgheight: imgheight,
-      imgwidth: scwidth
-    })
-  },
+  // imgLoad: function (e) {
+  //   let width = e.detail.width;
+  //   let height = e.detail.height;
+  //   const res = wx.getSystemInfoSync()
+  //   let that =this;
+  //   let scwidth = res.windowWidth;
+  //   let imgheight = scwidth/width*height;
+  //   console.log(width,height,scwidth,imgheight)
+  //   that.setData({
+  //     imgheight: imgheight,
+  //     imgwidth: scwidth
+  //   })
+  // },
   showimg: function(e) {
     let url = e.currentTarget.dataset.url;
     let imgarr = this.data.imgarr;
