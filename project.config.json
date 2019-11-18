@@ -346,6 +346,13 @@
 					"id": -1,
 					"name": "pages/auth/authorizeNew/authorize",
 					"pathName": "pages/auth/authorizeNew/authorize",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/H5page/H5page",
+					"pathName": "pages/H5page/H5page",
 					"scene": null
 				}
 			]
