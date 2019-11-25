@@ -7,7 +7,7 @@ page{
   padding-top: 50rpx;
 }
 .p-k .logo{
-  width: 400rpx;
+  width: 401rpx;
   height: 70rpx;
   display: block;
   margin: 100rpx auto;
