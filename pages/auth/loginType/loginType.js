@@ -177,7 +177,7 @@ Page({
 						    }
 						  }
 						});
-					}else{
+					}else{ 
             wx.switchTab({
               url: '/pages/mine/index/index'//改为直接跳转至首页
             });

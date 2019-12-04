@@ -1,9 +1,9 @@
-<!-- <view class="m">
+<view class="m">
   <view class="head" data-phone="{{system.kefu_telephone}}" bind:tap="goPhone">
     客服电话
     <view class="icon">立即拨打</view>
   </view>
-</view> -->
+</view>
 <view class="forms">
   <view class="block">
     <view class="tit">请选择反馈类型

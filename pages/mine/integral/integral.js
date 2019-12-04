@@ -1,6 +1,7 @@
 // pages/mine/integral/integral.js
 const api = require("../../../config/api.js");
 const util = require("../../../utils/util.js");
+var bol = true;
 Page({
 
   /**
@@ -40,8 +41,8 @@ Page({
       maintype: type == "xw"? 2 : 1,
       jifNUM: type == "xw"? jf.BEHAIV_POINTS : jf.SALES_POINTS
     })
-    console.log(this.data.maintype)
-    console.log(this.data.jifNUM)
+    // console.log(this.data.maintype)
+    // console.log(this.data.jifNUM)
     let titletxt = type == "xw"? "行为积分" : "消费积分"
     wx.setNavigationBarTitle({title: titletxt});
     // wx.getSystemInfo({
@@ -119,12 +120,16 @@ Page({
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    if(this.data.type === 'add'){
-      this.getAddList()
-    }else if(this.data.type === 'reduce'){
-      this.getReduceList()
-    }else{
-      this.getAllList()
+    console.log(bol)
+    if(bol){
+      bol = false;
+      if (this.data.type === 'add') {
+        this.getAddList()
+      } else if (this.data.type === 'reduce') {
+        this.getReduceList()
+      } else {
+        this.getAllList()
+      }
     }
   },
 
@@ -194,6 +199,7 @@ Page({
             }
           })
         }
+        bol = true
         if(page==1){
           wx.stopPullDownRefresh();
         }
@@ -221,6 +227,7 @@ Page({
             }
           })
         }
+        bol = true
         if(page==1){
           wx.stopPullDownRefresh();
         }
@@ -249,6 +256,7 @@ Page({
             }
           })
         }
+        bol = true
         if(page==1){
           wx.stopPullDownRefresh();
         }
@@ -275,18 +283,21 @@ Page({
         ts: '数据加载中...',
       }
     })
-    this.getList(page,'reduce');
+      that.getList(page, 'reduce');
   },
 
 
   getAllList: function(){
     let page = this.data.allPage;
+    var that = this
     // console.log(page)
     this.setData({
       all: {
         ts: '数据加载中...',
       }
     })
-    this.getList(page,'all');
+    // setTimeout(function(){
+      that.getList(page, 'all');
+    // },5000)
   }
 })

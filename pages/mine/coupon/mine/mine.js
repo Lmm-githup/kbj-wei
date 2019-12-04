@@ -1,6 +1,7 @@
 // pages/mine/coupon/mine/mine.js
 const api = require("../../../../config/api.js");
 const util = require("../../../../utils/util.js");
+var bol = true;
 Page({
   data: {
     type: '已领取',
@@ -32,6 +33,7 @@ Page({
 			tiptxt: '加载中...'
 		})
 		util.request(api.couponMine,{status:type,page:page},'POST').then(res=>{
+      console.log(res)
 			if(res.errcode===1){
 				if(type=='已领取'){
 					if(page==1){
@@ -91,6 +93,7 @@ Page({
 					tiptxt: res.errmsg
 				})
 			}
+      bol = true
 		}).catch(err=>{
 			console.log('错误，',err);
 			that.setData({
@@ -135,18 +138,23 @@ Page({
 		});
 	},
 	goBottom: function(e){
-		let page = 1;
-		let type = this.data.type;
-		if(type=='已领取'){
-			page = this.data.ylqPage
-		}
-		if(type=='已使用'){
-			page = this.data.ysyPage
-		}
-		if(type=='已过期'){
-			page = this.data.ygqPage
-		}
-		this.getList(type,page)
+    console.log(bol)
+    var that = this;
+    if(bol){
+      bol = false;
+      let page = 1;
+      let type = that.data.type;
+      if (type == '已领取') {
+        page = that.data.ylqPage
+      }
+      if (type == '已使用') {
+        page = that.data.ysyPage
+      }
+      if (type == '已过期') {
+        page = that.data.ygqPage
+      }
+      that.getList(type, page)
+    }
 	},
 	tabCenter: function(){
 		wx.redirectTo({
