@@ -146,6 +146,7 @@ Page({
       let type = that.data.type;
       if (type == '已领取') {
         page = that.data.ylqPage
+        console.log(page)
       }
       if (type == '已使用') {
         page = that.data.ysyPage
